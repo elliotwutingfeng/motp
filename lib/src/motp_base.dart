@@ -36,7 +36,10 @@ class MOTP {
     if (unixSeconds < 0) {
       throw ArgumentError('unixSeconds must be non-negative.');
     }
-    return md5sum('${unixSeconds ~/ period}$secret$pin', null, true)
-        .substring(0, digits);
+    return md5sum(
+      '${unixSeconds ~/ period}$secret$pin',
+      null,
+      true,
+    ).substring(0, digits);
   }
 }

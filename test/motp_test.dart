@@ -17,11 +17,15 @@ void main() {
     });
     test('16-digit upper-case secret and 4-digit pin at 42 seconds', () {
       expect(
-          MOTP(secret: '0123456789ABCDEF', pin: '1234').generate(42), 'BC0BE8');
+        MOTP(secret: '0123456789ABCDEF', pin: '1234').generate(42),
+        'BC0BE8',
+      );
     });
     test('16-digit lower-case secret and 4-digit pin at 42 seconds', () {
       expect(
-          MOTP(secret: '0123456789abcdef', pin: '1234').generate(42), 'A0507C');
+        MOTP(secret: '0123456789abcdef', pin: '1234').generate(42),
+        'A0507C',
+      );
     });
   });
 }
