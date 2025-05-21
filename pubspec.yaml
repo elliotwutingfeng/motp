@@ -1,6 +1,6 @@
 name: motp
 description: A Dart library for generating Mobile-OTP (mOTP) codes.
-version: 0.0.2
+version: 0.0.3
 repository: https://github.com/elliotwutingfeng/motp
 funding:
  - https://www.buymeacoffee.com/elliotwutingfeng
