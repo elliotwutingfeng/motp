@@ -27,5 +27,11 @@ void main() {
         'A0507C',
       );
     });
+    test('Current epoch time', () {
+      expect(
+        MOTP(secret: '0123456789abcdef', pin: '1234').generate().length,
+        6,
+      );
+    });
   });
 }
