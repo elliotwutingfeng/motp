@@ -1,12 +1,7 @@
 import 'package:motp/motp.dart';
 
 void main() {
-  final MOTP motp = MOTP(
-    secret: '0123456789ABCDEF',
-    pin: '1234',
-    period: 10,
-    digits: 6,
-  );
+  final MOTP motp = MOTP(secret: '0123456789ABCDEF', pin: '1234');
 
   // By default, the current epoch time will be used.
   String code = motp.generate();
