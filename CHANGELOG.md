@@ -1,3 +1,7 @@
+# v0.0.4
+
+- Bump dependencies.
+
 # v0.0.3
 
 - Bump dependencies.

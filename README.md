@@ -10,7 +10,7 @@ Mobile-OTP (mOTP) is a [one-time password](https://en.wikipedia.org/wiki/One-tim
 
 ## Requirements
 
-- **Dart SDK:** 3.8+
+- **Dart SDK:** 3.9+
 
 ## References
 
