@@ -10,16 +10,23 @@ import 'package:hashlib/hashlib.dart';
 ///
 /// The default values for [period] and [digits] are from the specification.
 class MOTP {
-  late String secret;
-  late String pin;
-  late int period;
-  late int digits;
+  final String secret;
+  final String pin;
+  final int period;
+  final int digits;
 
-  MOTP({
+  const MOTP._({
     required this.secret,
     required this.pin,
-    this.period = 10,
-    this.digits = 6,
+    required this.period,
+    required this.digits,
+  });
+
+  factory MOTP({
+    required final String secret,
+    required final String pin,
+    final int period = 10,
+    final int digits = 6,
   }) {
     if (period < 1) {
       throw ArgumentError('period must be positive.');
@@ -27,6 +34,8 @@ class MOTP {
     if (digits < 1 || digits > 32) {
       throw ArgumentError('digits must be in the range 1-32.');
     }
+
+    return MOTP._(secret: secret, pin: pin, period: period, digits: digits);
   }
 
   /// By default, the current epoch time will be used.

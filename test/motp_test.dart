@@ -21,6 +21,17 @@ void main() {
         'BC0BE8',
       );
     });
+    test('15-second period and 7-digit output at 42 seconds', () {
+      expect(
+        MOTP(
+          secret: '0123456789ABCDEF',
+          pin: '1234',
+          period: 15,
+          digits: 7,
+        ).generate(42),
+        '3AC3A85',
+      );
+    });
     test('16-digit lower-case secret and 4-digit pin at 42 seconds', () {
       expect(
         MOTP(secret: '0123456789abcdef', pin: '1234').generate(42),
